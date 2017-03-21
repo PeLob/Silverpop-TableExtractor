@@ -1,4 +1,6 @@
 devtools::load_all('/home/')
 library(keboola.r.custom.application)
 library(RCurl)
+library(httr)
+library(XML)
 doSomething(Sys.getenv("KBC_DATADIR"))
