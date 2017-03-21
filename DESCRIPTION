@@ -1,0 +1,15 @@
+Package: keboola.r.custom.application
+Type: Package
+Title: Custom R application skeleton
+Version: 0.1
+Date: 2015-10-26
+Author: Ondrej Popelka
+Maintainer: Ondrej Popelka <ondrej.popelka@keboola.com>
+Description: Skeleton sample application to be used as Custom Science application in KBC.
+License: MIT + file LICENSE
+LazyData: TRUE
+Suggests:
+    testthat
+Imports:
+    keboola.r.docker.application
+RoxygenNote: 5.0.1

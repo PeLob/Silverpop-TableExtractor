@@ -1,0 +1,13 @@
+language: r
+
+sudo: required
+
+# Be strict when checking our package
+warnings_are_errors: true
+
+r_github_packages:
+ - keboola/r-application
+ - keboola/r-docker-application
+
+before_install:
+ - export KBC_DATADIR=$TRAVIS_BUILD_DIR/tests/data/
