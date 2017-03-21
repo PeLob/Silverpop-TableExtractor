@@ -13,7 +13,7 @@ doSomething <- function(datadir) {
 	
 	UserName <- app$getParameters()$UserName
 	PassWord <- app$getParameters()$PassWord
-	MyTable <- app$getParameters()$MyTable
+	MyTable <- app$getParameters()$Table
 	attempts <- app$getParameters()$attempts
 	delay <- app$getParameters()$delay
 	
@@ -58,8 +58,6 @@ doSomething <- function(datadir) {
 	</Envelope>"
 
 	# Trick to pass the parameters
-
-	body2 <- gsub("Email", Email, body2)
 
 	test2 <- POST(url = paste(apiURL,jsessionid,sep=""), body = body2
 				  ,verbose(), content_type("text/xml"))
