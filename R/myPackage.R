@@ -16,12 +16,8 @@ doSomething <- function(datadir) {
 	MyTable <- app$getParameters()$Table
 	attempts <- app$getParameters()$attempts
 	delay <- app$getParameters()$delay
-	
+		
 	# Authentication request
-	library(RCurl)
-	library(httr)
-	library(XML)
-
 	apiURL <- 'api6.silverpop.com/XMLAPI'
 
 
@@ -50,7 +46,7 @@ doSomething <- function(datadir) {
 	body2 <- "<Envelope>
 	<Body>   
 	<ExportTable>    
-	<TABLE_ID>MyTable</TABLE_ID>
+	<TABLE_ID>117655</TABLE_ID>
 	<EMAIL>Email</EMAIL> 
 	<EXPORT_FORMAT>CSV</EXPORT_FORMAT>   
 	</ExportTable>  
@@ -58,7 +54,6 @@ doSomething <- function(datadir) {
 	</Envelope>"
 
 	# Trick to pass the parameters
-
 	test2 <- POST(url = paste(apiURL,jsessionid,sep=""), body = body2
 				  ,verbose(), content_type("text/xml"))
 
@@ -91,12 +86,15 @@ doSomething <- function(datadir) {
 	  try(
 		
 		data_01 <-getURL(paste(url,last_file,sep=""), userpwd = userpwd)
-		)
+	  )
 	} 
 
 	data <- read.csv(textConnection(data_01, encoding = "UTF-8"), encoding = "UTF-8")
-#	head(data)
+	#head(data)
+
+
 
 	write.csv(data, file = file.path(datadir, "out/tables/CRMi.csv"), row.names = FALSE)
+
 
 }
