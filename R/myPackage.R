@@ -89,7 +89,7 @@ doSomething <- function(datadir) {
 	  )
 	} 
 
-	data <- read.csv(textConnection(data_01, encoding = "UTF-8"), encoding = "UTF-8")
+	data <- read.csv(textConnection(data_01), encoding = "UTF-8")
 	#head(data)
 
 
