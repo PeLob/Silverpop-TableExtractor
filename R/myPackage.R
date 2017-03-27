@@ -47,7 +47,6 @@ doSomething <- function(datadir) {
 	<Body>   
 	<ExportTable>    
 	<TABLE_ID>117655</TABLE_ID>
-	<EMAIL>Email</EMAIL> 
 	<EXPORT_FORMAT>CSV</EXPORT_FORMAT>   
 	</ExportTable>  
 	</Body> 
