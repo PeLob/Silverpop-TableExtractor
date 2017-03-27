@@ -94,7 +94,7 @@ doSomething <- function(datadir) {
 
 
 
-	write.csv(data, file = file.path(datadir, "out/tables/CRMi.csv"), row.names = FALSE)
+	write.csv(data, file = file.path(datadir, "out/tables/target_group.csv"), row.names = FALSE)
 
 
 }
